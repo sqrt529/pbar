@@ -1,0 +1,9 @@
+pbar.pl - Draws a colorized percentage bar for the given values to a shell
+
+Usage: ./pbar.pl -v <value> -m <maxvalue> [-w <width>] [-d]
+
+Possible values are integers like 23 or floats like 23.42
+
+Example:
+	
+	./pbar.pl -v `df -h / | egrep -v "(^[a-z]|[a-z]$)" | awk '{ print(int($5)) }'` -m 100
